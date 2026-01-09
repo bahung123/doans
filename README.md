@@ -13,6 +13,12 @@ Hệ thống RAG hỗ trợ sinh viên tra cứu quy chế, quy định tại Đ
 
 **Yêu cầu:** Python 3.10+
 
+Ubuntu/Debian cần cài thêm:
+```
+sudo apt update
+sudo apt install python3-venv
+```
+
 **Bước 1:** Chạy setup script
 
 - **Linux/Mac:** `bash setup.sh`

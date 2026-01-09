@@ -8,7 +8,15 @@ echo "[1/5] Checking Python..."
 python3 --version || { echo "Error: Python 3.10+ required"; exit 1; }
 
 echo "[2/5] Creating virtual environment..."
-[ -d "venv" ] || python3 -m venv venv
+
+if [ -d "venv" ] && [ ! -f "venv/bin/activate" ]; then
+    echo "Removing broken venv..."
+    rm -rf venv
+fi
+
+if [ ! -d "venv" ]; then
+    python3 -m venv venv || { echo "Error: Cannot create venv. Run: sudo apt install python3-venv"; exit 1; }
+fi
 
 echo "[3/5] Installing dependencies..."
 source venv/bin/activate

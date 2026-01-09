@@ -19,7 +19,7 @@ def check_env():
     from dotenv import load_dotenv
     load_dotenv()
     
-    required_vars = ["GROQ_API_KEY", "COHERE_API_KEY"]
+    required_vars = ["GROQ_API_KEY", "SILICONFLOW_API_KEY"]
     missing = [var for var in required_vars if not os.getenv(var)]
     
     if missing:
@@ -27,7 +27,7 @@ def check_env():
         print("Please create a .env file with the required variables.")
         print("Example:")
         print("  GROQ_API_KEY=your_groq_key")
-        print("  COHERE_API_KEY=your_cohere_key")
+        print("  SILICONFLOW_API_KEY=your_siliconflow_key")
         sys.exit(1)
 
 def main():
