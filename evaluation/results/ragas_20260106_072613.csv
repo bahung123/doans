@@ -1,0 +1,8 @@
+Metric,vector_only,bm25_only,hybrid,hybrid_rerank
+answer_relevancy,0.749,0.635,0.832,0.872
+context_precision,0.678,0.538,0.795,0.861
+context_recall,0.815,0.732,0.849,0.872
+faithfulness,0.912,0.938,0.942,0.937
+rouge1_score,0.557,0.533,0.576,0.598
+rouge2_score,0.408,0.385,0.421,0.439
+rougeL_score,0.526,0.508,0.545,0.567
