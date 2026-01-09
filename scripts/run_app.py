@@ -7,7 +7,6 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT))
 
 def check_data():
-    """Check if data folder exists, download if not."""
     data_path = REPO_ROOT / "data"
     if not data_path.exists() or not any(data_path.iterdir()):
         print("Data folder not found. Downloading from HuggingFace...")
@@ -15,7 +14,6 @@ def check_data():
         download_data()
 
 def check_env():
-    """Check if required environment variables are set."""
     from dotenv import load_dotenv
     load_dotenv()
     
